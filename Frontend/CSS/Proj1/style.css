@@ -1,12 +1,8 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
 }
 
 html,
@@ -15,40 +11,7 @@ body {
     width: 100%;
 }
 
-body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    font-family: system-ui, sans-serif;
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
-    display: block;
-    max-width: 100%;
-}
-
-input,
-button,
-textarea,
-select {
-    font: inherit;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    overflow-wrap: break-word;
-}
-
 main {
-    height: 100%;
     width: 100%;
     background-color: #D5FF40;
 }
@@ -60,14 +23,13 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 nav .part2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 140px;
+    gap: 100px;
 }
 
 nav h2 {
@@ -80,4 +42,108 @@ nav a {
     color: black;
     text-decoration: none;
 
+}
+
+section {
+    padding: 60px 100px;
+}
+
+section .heroText1 {
+    /* background-color: red; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.heroText1 h1 {
+    font-size: 200px;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 200px;
+}
+
+.heroText1 .video {
+    height: 150px;
+    width: 600px;
+    background-color: black;
+    border-radius: 100px;
+    background-image: url("mitul-grover-woXG3LK04sw-unsplash.jpg");
+    background-size: cover;
+    /* background-position: right; */
+    padding: 8px;
+}
+
+.video .play {
+    height: 100%;
+    width: 100px;
+    border-radius: 50%;
+    background-color: black;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play i {
+    color: white;
+    font-size: 50px;
+
+}
+
+section .heroText2 {
+    /* background-color: red; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 550px;
+}
+
+.heroText2 h1 {
+    font-size: 200px;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 200px;
+}
+
+.heroText2 p {
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 500;
+    /* font-weight: 900;
+    line-height: 200px; */
+}
+
+.image {
+    height: 800px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    width: 90%;
+    margin-left: 5%;
+    background-image: url(https://cdn.prod.website-files.com/64e7340b7d897bf0c7179e52/64ebbe14414665ada632fb9e_hero%20big%20image-min.png);
+    background-color: red;
+    background-size: cover;
+    background-position: center;
+    margin-top: 120px;
+    position: relative;
+}
+
+.image .arrow {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    right: 5%;
+    top: -10%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #444;
+}
+
+.arrow i {
+    font-size: 150px;
 }
