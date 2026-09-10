@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+body {
+    color: #82a5ca;
+    /* background-image: url("images/guillermo-ferla-Oze6U2m1oYU-unsplash.jpg"); adding gif/animation, and moved to div*/
+
+    /* My approach: */
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    /* gap: 10px; */
+    /* position: relative;
+    top: 300px; */
+
+    /* Tutor's Approach to the Challenge: */
+
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.hero {
+    background-image: url("images/giphy-ezgif.com-gif-to-webp-converter.webp");
+    background-size: cover;
+    padding-bottom: 400px;
+}
+
+.hero .spaceX {
+    position: inherit;
+}
+
+.hero h1 {
+    position: relative;
+    top: 50px;
+}
+
+.hero .button1 {
+    position: relative;
+    top: 80px;
+}
+
+
+/* Challenge: 
+i) Center the text button.
+ii) Style the button according to the provided design.
+    Use a class to select the button.
+ */
+/* My approach: */
+/* h1 {
+    position: relative;
+    top: 250px;
+}
+
+.button1 {
+    position: relative;
+    top: 250px;
+    width: 85px;
+    height: 30px;
+    font-size: 15px;
+    text-align: center;
+} */
+
+/* Tutor's approach: */
+
+.button1 {
+    /* First thought: More space around the text of the button in the provided design, so this calls for padding property.*/
+    /* padding: 10px; */
+    /* Second thought: Now, the button has a bit too much space around top and bottom, but in the provided design, it has more around right and left(i.e. more rectangular), so we adjust padding differently for (top&bottom), (right&left).*/
+    padding: 7px 14px;
+    /*Third thought: Now, the background color of the button looks white in the provided design, instead of greyish: */
+    background: white;
+    /* Fourth thought: No border in the provided design, which happens to be present by default inside our button: */
+    border: none;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 800;
+    color: #82a5ca;
+    font-size: 30px;
+    /* Could also use: font-family: inherit;  This makes the button inherit the body's font, which any other element(p,h1,h2...) automatically does.*/
+}
+
+.underline {
+    /* text-decoration: underline; */
+
+    border-bottom: 2px solid white;
+}
+
+#spaceX {
+    height: 50px;
+    width: 100px;
+}
+
+.footer {
+    font-size: 60px;
+}

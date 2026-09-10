@@ -1,0 +1,8 @@
+@font-face {
+    font-family: TheGodfather;
+    src: url("TheGodfather-v2.ttf");
+}
+
+h1 {
+    font-family: TheGodfather;
+}
