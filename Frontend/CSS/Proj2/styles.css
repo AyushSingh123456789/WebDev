@@ -1,8 +1,8 @@
-* {
+/* * {
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
-}
+} */
 
 
 body {
@@ -28,10 +28,18 @@ body {
 .hero {
     background-image: url("images/giphy-ezgif.com-gif-to-webp-converter.webp");
     background-size: cover;
-    padding-bottom: 400px;
+    height: 80%;
+    /* padding-bottom: 400px; */
+    padding: 10px 0 40px 0;
 }
 
-.hero .spaceX {
+h1 {
+    /* Adding text-shadow: (right shad) (down shad) (blur) (color of shad); Useful when some text blends too much with the bg. */
+    text-shadow: 0px 0px 4px black;
+    /* Technique to use when the Text and the bg have same color, e.g, White bg and Text, then: text-shadow: 0px 0px 2px black; */
+}
+
+/* .hero .spaceX {
     position: inherit;
 }
 
@@ -43,7 +51,7 @@ body {
 .hero .button1 {
     position: relative;
     top: 80px;
-}
+} */
 
 
 /* Challenge: 
@@ -86,7 +94,6 @@ ii) Style the button according to the provided design.
 
 .underline {
     /* text-decoration: underline; */
-
     border-bottom: 2px solid white;
 }
 
@@ -95,6 +102,6 @@ ii) Style the button according to the provided design.
     width: 100px;
 }
 
-.footer {
+/* .footer {
     font-size: 60px;
-}
+} */
