@@ -37,6 +37,7 @@ pnpm-debug.log*
 *.swp
 *.jpg
 *.jpeg
+*.png
 
 # OS generated files
 .DS_Store
