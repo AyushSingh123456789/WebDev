@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: antiquewhite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.welcome-title {
+    text-align: center;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin: 20px 0 0 0;
+    gap: 10px;
+}
+
+#welcome-el {
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+}
+
+#welcome-to {
+    font-size: 25px;
+    font-weight: lighter;
+    color: black;
+}
+
+.Learnings {
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+h1 {
+    width: 25%;
+    color: blue;
+    font-size: 40px;
+    background-color: lightgoldenrodyellow;
+    font-weight: bold;
+}
+
+#module {
+    width: 75%;
+    height: 200px;
+    color: black;
+    font-weight: lighter;
+    background-color: white;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.span-1 {
+    text-decoration: underline;
+}
+
+.span-2 {
+    font-weight: bold;
+}

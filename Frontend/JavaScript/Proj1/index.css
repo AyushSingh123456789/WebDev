@@ -1,9 +1,22 @@
-body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.homepage {
+    height: 100vh;
+    width: 100%;
     background-image: url("subwayStation.avif");
     background-size: cover;
+    /* The background-size: cover doesn't work properly cause the attached image is more longer than wider, so a proper landscape picture would've been the correct choice for this 'cover' property to work properly, and display the full image correctly. */
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
@@ -27,6 +40,16 @@ h2 {
     width: 180px;
     height: 50px;
     font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+#save-btn {
+    margin-top: 15px;
+    background-color: blue;
+    padding: 6px 12px;
+    width: 180px;
+    height: 50px;
     font-weight: bold;
     border-radius: 5px;
 }
