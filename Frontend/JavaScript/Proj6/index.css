@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: green;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#title {
+    color: #d69b1d;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+/* #title-2 {
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+} */
+
+#first-btn,
+#second-btn {
+    width: 180px;
+    height: 40px;
+    text-align: center;
+    color: green;
+    background-color: #d69b1d;
+    padding: 6px 12px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+#first-btn {
+    margin-bottom: 10px;
+}
+
+#pricing {
+    font-size: 25px;
+    color: white;
+}
