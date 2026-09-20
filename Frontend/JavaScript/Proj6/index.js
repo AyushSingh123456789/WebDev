@@ -1,12 +1,14 @@
 let firstCard = Math.floor(Math.random() * 11) + 2
 let secondCard = Math.floor(Math.random() * 11) + 2
 let sum = firstCard + secondCard
+let cards = [firstCard, secondCard]
 
 let Value = document.getElementById("value-1-2")
 Value.style.color = "white"
 Value.style.fontSize = "28px"
+Value.style.marginTop = "0px"
 Value.style.marginBottom = "0px"
-Value.textContent = "Cards: " + firstCard + " " + secondCard
+Value.textContent = "Cards: " + cards[0] + " " + cards[1]
 
 let Sum = document.getElementById("sum")
 Sum.style.color = "white"
