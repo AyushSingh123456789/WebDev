@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+    font-style: italic;
+    color: orange;
+    font-weight: bold;
+    gap: 15px;
+}
+
+#fightButton {
+    width: 150px;
+    height: 50px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 20px;
+    background-color: orange;
+    color: white;
+}
