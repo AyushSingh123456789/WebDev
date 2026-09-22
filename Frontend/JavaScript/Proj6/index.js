@@ -1,40 +1,73 @@
-let firstCard = Math.floor(Math.random() * 11) + 2
-let secondCard = Math.floor(Math.random() * 11) + 2
-let sum = firstCard + secondCard
-let cards = [firstCard, secondCard]
+let player = {
+    Name: "Ayush",
+    Chips: 145
+}
 
+let sum = 0
+let cards = []
+let hasBlackJack = false
+let isAlive = false
+let message = ""
 let Value = document.getElementById("value-1-2")
-Value.style.color = "white"
-Value.style.fontSize = "28px"
-Value.style.marginTop = "0px"
-Value.style.marginBottom = "0px"
-Value.textContent = "Cards: " + cards[0] + " " + cards[1]
-
 let Sum = document.getElementById("sum")
-Sum.style.color = "white"
-Sum.style.fontSize = "28px"
-Sum.textContent = "Sum: " + sum
-
 let result = document.getElementById("title-2")
-result.style.color = "red"
-result.style.fontSize = "30px"
-result.style.fontStyle = "italic"
-function gameStart() {
-    if (sum === 21) {
-        result.textContent = "You've got blackjack 🥳"
+let playerEl = document.getElementById("player-name")
+
+playerEl.textContent = player.Name + ": $" + player.Chips
+playerEl.style.fontSize = "25px"
+playerEl.style.color = "white"
+
+Value.textContent = "Cards: "
+Sum.textContent = "Sum: "
+Value.style.color = Sum.style.color = "white"
+Value.style.fontSize = Sum.style.fontSize = "25px"
+Sum.style.marginTop = "0"
+
+function getRandomCard() {
+    let randomNumber = Math.floor(Math.random() * 13) + 1
+    if (randomNumber > 10) {
+        return 10
     }
-    else if (sum < 21) {
-        result.textContent = "Do you want to draw a new card? 😐"
+    else if (randomNumber === 1) {
+        return 11
     }
     else {
-        result.textContent = "You're out of the game 😭"
+        return randomNumber
     }
 }
 
-function newCard() {
-    let first = Math.floor(Math.random() * 11) + 2
-    let second = Math.floor(Math.random() * 11) + 2
-    Value.textContent = "Cards: " + first + " " + second
-    sum = first + second
+function startGame() {
+    isAlive = true
+    let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+    cards = [firstCard, secondCard]
+    sum = firstCard + secondCard
+    renderGame()
+}
+
+function renderGame() {
+    Value.textContent = "Cards: " + cards.join(" ")
+
     Sum.textContent = "Sum: " + sum
+    if (sum === 21) {
+        message = "You've got blackjack 🥳"
+        hasBlackJack = true
+    }
+    else if (sum <= 20) {
+        message = "Do you want to draw a new card? 😐"
+    }
+    else {
+        message = "You're out of the game 😭"
+        isAlive = false
+    }
+    result.textContent = message
+}
+
+function newCard() {
+    if (isAlive && !hasBlackJack) {
+        let card = getRandomCard()
+        sum += card
+        cards.push(card)
+        renderGame()
+    }
 }
