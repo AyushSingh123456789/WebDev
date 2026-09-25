@@ -11,14 +11,14 @@ body {
 }
 
 #title-1 {
-    font-size: 60px;
+    font-size: 40px;
     text-align: center;
 }
 
 #title-2 {
     color: white;
     margin-top: 0px;
-    font-size: 40px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -51,5 +51,36 @@ hr {
 #pw-2 {
     width: 300px;
     height: 40px;
+    background-color: #232f40;
+}
+
+.stretch-features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#pw-len {
+    width: 100px;
+    height: 20px;
+    margin-top: 20px;
+    text-align: center;
+    padding: 6px 12px;
+    color: red;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #232f40;
+}
+
+#pw-len-btn {
+    width: 130px;
+    height: 30px;
+    margin-top: 10px;
+    text-align: center;
+    padding: 6px 12px;
+    color: red;
+    font-weight: bold;
+    font-size: 15px;
     background-color: #232f40;
 }

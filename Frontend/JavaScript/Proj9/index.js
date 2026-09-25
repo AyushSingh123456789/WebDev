@@ -9,8 +9,13 @@ const characters = [
 
 let password1 = document.getElementById("pw-1")
 let password2 = document.getElementById("pw-2")
-let randomPassword1 = Math.floor(Math.random() * characters.length)
-let randomPassword2 = Math.floor(Math.random() * characters.length)
+let inputElement
+let buttonElement
+
+function passwordLength() {
+    inputElement = Number(document.getElementById("pw-len").value)
+    buttonElement = document.getElementById("pw-len-btn")
+}
 
 password1.style.color = "#78cb9e"
 password1.style.width = "300px"
@@ -30,7 +35,8 @@ password2.style.padding = "6px 12px"
 
 
 function passwordCreate() {
-    if (password1.textContent.length < 15 && password2.textContent.length < 15) {
+
+    if (password1.textContent.length === inputElement && password2.textContent.length === inputElement) {
         passwordGeneration()
     }
     else {
@@ -42,10 +48,10 @@ function passwordCreate() {
 }
 
 function passwordGeneration() {
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < inputElement; i++) {
         password1.textContent += characters[Math.floor(Math.random() * characters.length)]
     }
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < inputElement; i++) {
         password2.textContent += characters[Math.floor(Math.random() * characters.length)]
     }
 }
