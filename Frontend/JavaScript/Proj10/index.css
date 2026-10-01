@@ -7,6 +7,7 @@ body {
     justify-content: center;
     align-items: center; */
     min-height: 100vh;
+    min-width: 400px;
 }
 
 #input-el {
@@ -27,4 +28,20 @@ body {
     color: white;
     font-size: 20px;
     font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+li {
+    margin-top: 10px;
+}
+
+a {
+    /* (li a) -> targeting only the anchor tag present inside <li> items(Only if other anchor tags also exist). */
+    color: #5f9341;
+    text-decoration: #5f9341 underline;
 }
