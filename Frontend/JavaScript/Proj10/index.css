@@ -21,12 +21,35 @@ body {
 }
 
 #input-btn {
+    border: 1px solid #5f9341;
     width: 150px;
     height: 40px;
     padding: 6px 12px;
     background-color: #5f9341;
     color: white;
     font-size: 20px;
+    font-weight: bold;
+}
+
+#tab-btn {
+    border: 1px solid #5f9341;
+    width: 180px;
+    height: 40px;
+    padding: 6px 12px;
+    background-color: #5f9341;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#delete-btn {
+    border: 1px solid #5f9341;
+    width: 180px;
+    height: 40px;
+    padding: 6px 12px;
+    background-color: transparent;
+    color: #5f9341;
+    font-size: 22px;
     font-weight: bold;
 }
 
