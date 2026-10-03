@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.first-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.second-div {
+    display: inline-block;
+    margin-top: 35px;
+    margin-left: 500px;
+    text-align: center;
+}
+
+#task-name {
+    width: 250px;
+    height: 30px;
+    padding: 6px 12px;
+    font-size: 20px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+#add-btn {
+    text-align: center;
+    border: 2px black solid;
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+#title-2 {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 30px;
+    font-size: 45px;
+    font-style: italic;
+}
+
+.fourth-div {
+    margin-top: 15px;
+}

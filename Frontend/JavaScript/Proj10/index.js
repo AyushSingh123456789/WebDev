@@ -12,10 +12,6 @@ if (leadFromLocalStorage) {
     render(myLeads)
 }
 
-const tabs = [
-    { url: "https://www.linkedin.com/in/ayush-singh-529ab1371" }
-]
-
 function render(leads) {
     let listItems = ""
     for (let i = 0; i < leads.length; i++) {
@@ -44,8 +40,9 @@ deleteBtn.addEventListener("dblclick", function () {
 })
 
 tabBtn.addEventListener("click", function () {
-    myLeads.push(tabs[0].url)
-    localStorage.setItem("myLeads", JSON.stringify(myLeads))
-    render(myLeads)
-    // localStorage.setItem("url", tabs[0].url)
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+        myLeads.push(tabs[0].url)
+        localStorage.setItem("myLeads", JSON.stringify(myLeads))
+        render(myLeads)
+    })
 })
