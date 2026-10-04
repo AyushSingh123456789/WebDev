@@ -22,6 +22,60 @@
     text-align: center;
 }
 
+.new-entry-1 {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 25px;
+    text-align: center;
+}
+
+#priority-btn-1,
+#priority-btn-2 {
+    width: 70px;
+    height: 30px;
+    text-align: center;
+}
+
+.new-entry-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    gap: 15px;
+    font-size: 25px;
+}
+
+#due-date-btn {
+    width: 60px;
+    height: 25px;
+    text-align: center;
+}
+
+.new-entry-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#submit-btn {
+    width: 70px;
+    height: 30px;
+    text-align: center;
+}
+
+#clear-btn {
+    width: 80px;
+    height: 30px;
+    text-align: center;
+}
+
 #task-name {
     width: 250px;
     height: 30px;
