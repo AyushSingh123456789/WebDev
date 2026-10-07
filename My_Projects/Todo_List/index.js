@@ -1,12 +1,7 @@
 let Name
 let priority
 let dueDate
-// let list = {}
-list = {
-    "Name": "",
-    "Priority": "",
-    "DueDate": ""
-}
+let list = {}
 
 const addBtn = document.getElementById("add-btn")
 const priorityBtn1 = document.getElementById("priority-btn-1")
@@ -25,8 +20,10 @@ resultDisplay.style.textAlign = "center"
 resultDisplay.style.fontWeight = "bold"
 
 addBtn.addEventListener("click", function () {
-    Name = document.getElementById("task-name").value
+    const taskInput = document.getElementById("task-name")
+    Name = taskInput.value
     list.Name = Name
+    taskInput.value = ""
 })
 
 priorityBtn1.addEventListener("click", function () {
@@ -40,16 +37,23 @@ priorityBtn2.addEventListener("click", function () {
 })
 
 dueDateBtn.addEventListener("click", function () {
-    dueDate = document.getElementById("due-date").value
+    const dueDateInput = document.getElementById("due-date")
+    dueDate = dueDateInput.value
     list.DueDate = dueDate
+    dueDateInput.value = ""
 })
 
 
 submitBtn.addEventListener("click", function () {
-    localStorage.setItem('todoList', JSON.stringify(list))
-    const listContent = localStorage.getItem('todoList')
-    const parsedListContent = JSON.parse(listContent)
-    resultDisplay.textContent += JSON.stringify(parsedListContent) + ""
+    let existingContent = JSON.parse(localStorage.getItem('todoList')) || []
+    let newContent = {
+        Name: Name,
+        Priority: priority,
+        DueDate: dueDate
+    }
+    existingContent.push(newContent)
+    localStorage.setItem('todoList', JSON.stringify(existingContent))
+    resultDisplay.textContent = JSON.stringify(existingContent) + ""
 })
 
 clearBtn.addEventListener("click", function () {
