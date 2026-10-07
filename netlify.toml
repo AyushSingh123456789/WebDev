@@ -1,9 +1,4 @@
 [build]
-  # 1. Type the exact folder path to your self-project starting from the root
   base = "WebDev/Todo_List"
-  
-  # 2. Tell Netlify to serve files right from inside that folder
   publish = "." 
-  
-  # 3. Leave this completely blank for plain HTML
   command = "" 
