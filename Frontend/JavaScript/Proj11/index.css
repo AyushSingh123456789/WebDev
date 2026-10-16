@@ -15,3 +15,10 @@
     gap: 10px;
     font-size: 35px;
 }
+
+
+#stock-sign {
+    position: relative;
+    bottom: 108px;
+    left: 785px;
+}

@@ -1,15 +1,17 @@
-// const id = setInterval(() => {
-//     getStockData()
-//     clearInterval(id)
-// }, 1500)
+let stockViewers = []
 
+export function onStockUpdate(callback) {
+    stockViewers.push(callback)
+}
 
 function getStockData() {
-    return {
+    const newData = {
         name: 'QtechAI',
         sym: 'QTA',
         price: (Math.random() * 3).toFixed(2),
         time: new Date().toTimeString().slice(0, 8)
     }
+    stockViewers.forEach(callback => callback(newData))
 }
-export { getStockData } 
+
+const id = setInterval(getStockData, 1500)
