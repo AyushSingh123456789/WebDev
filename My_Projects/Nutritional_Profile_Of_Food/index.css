@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.container-1 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.container-2,
+.container-3 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.container-4 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#whole-list-view {
+    text-align: center;
+    width: 150px;
+    height: 20px;
+    padding: 0px 12px;
+}
+
+#name-submit,
+#qty-submit {
+    text-align: center;
+    width: 80px;
+    height: 25px;
+    padding: 0px 12px;
+}
