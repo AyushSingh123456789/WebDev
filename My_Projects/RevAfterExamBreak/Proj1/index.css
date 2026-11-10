@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-1 {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+
+input::placeholder {
+    color: lightcoral;
+    opacity: 1;
+}
+
+button {
+    width: 100px;
+    height: 20px;
+}
+
+#view-active,
+#view-completed {
+    width: 150px;
+}
+
+.local-storage-view {
+    margin-top: 5px;
+    width: 100%;
+    height: 500px;
+    background-color: bisque;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-weight: bold;
+    font-size: 25px;
+}
