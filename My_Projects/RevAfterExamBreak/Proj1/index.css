@@ -27,8 +27,8 @@ button {
     height: 20px;
 }
 
-#view-active,
-#view-completed {
+#view-highP,
+#view-lowP {
     width: 150px;
 }
 
