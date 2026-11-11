@@ -39,6 +39,7 @@ button {
     background-color: bisque;
     text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: red;

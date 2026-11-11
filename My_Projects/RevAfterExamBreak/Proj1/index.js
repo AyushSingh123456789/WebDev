@@ -7,12 +7,16 @@ const title1 = document.getElementById("title-1")
 const priority1 = document.getElementById("priority-1")
 const dueDate1 = document.getElementById("due-date-1")
 const db = document.querySelector(".local-storage-view")
-const details = []
+
+let details = []
+let Task = {}
 
 addBtn.addEventListener("click", function () {
-    details.push('Title: ' + title1.value)
-    details.push('Priority: ' + priority1.value)
-    details.push('Due Date: ' + dueDate1.value)
+    Task.title = title1.value
+    Task.priority = priority1.value
+    Task.dueDate = dueDate1.value
+    details.push(Task)
+    Task = {}
     localStorage.setItem("details", JSON.stringify(details))
     window.alert("Data Saved Successfully!")
 })
@@ -20,7 +24,17 @@ addBtn.addEventListener("click", function () {
 viewAllBtn.addEventListener("click", function () {
     const storedDetails = localStorage.getItem("details")
     const parsedDetails = JSON.parse(storedDetails)
-    db.textContent = parsedDetails
+    // console.log(parsedDetails)
+    db.textContent = ""
+    for (let i = 0; i < parsedDetails.length; i++) {
+        let currentTitle = parsedDetails[i].title
+        let currentPriority = parsedDetails[i].priority
+        let currentDueDate = parsedDetails[i].dueDate
+        let divContent = document.createElement("div")
+        divContent.textContent = `Title: ${currentTitle}, Priority: ${currentPriority}, DueDate: ${currentDueDate}`
+        db.appendChild(divContent)
+    }
+
 })
 
 viewHighPBtn.addEventListener("click", function () {
