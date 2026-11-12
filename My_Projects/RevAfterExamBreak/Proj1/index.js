@@ -38,11 +38,51 @@ viewAllBtn.addEventListener("click", function () {
 })
 
 viewHighPBtn.addEventListener("click", function () {
-
+    const storedDetails2 = localStorage.getItem("details")
+    const parsedDetails2 = JSON.parse(storedDetails2)
+    db.textContent = ""
+    let availability = false
+    for (let i = 0; i < parsedDetails2.length; i++) {
+        if (parsedDetails2[i].priority == "High") {
+            availability = true
+            let currentTitle2 = parsedDetails2[i].title
+            let currentPriority2 = parsedDetails2[i].priority
+            let currentDueDate2 = parsedDetails2[i].dueDate
+            let divContent2 = document.createElement("div")
+            divContent2.textContent = `Title: ${currentTitle2}, Priority: ${currentPriority2}, DueDate: ${currentDueDate2}`
+            db.appendChild(divContent2)
+        }
+        else {
+            availability = false
+        }
+    }
+    if (availability === false) {
+        window.alert("No Task with high priority is present in the storage.")
+    }
 })
 
 viewLowPBtn.addEventListener("click", function () {
-
+    const storedDetails3 = localStorage.getItem("details")
+    const parsedDetails3 = JSON.parse(storedDetails3)
+    db.textContent = ""
+    let availability2 = false
+    for (let i = 0; i < parsedDetails3.length; i++) {
+        if (parsedDetails3[i].priority == "Low") {
+            availability2 = true
+            let currentTitle3 = parsedDetails3[i].title
+            let currentPriority3 = parsedDetails3[i].priority
+            let currentDueDate3 = parsedDetails3[i].dueDate
+            let divContent3 = document.createElement("div")
+            divContent3.textContent = `Title: ${currentTitle3}, Priority: ${currentPriority3}, DueDate: ${currentDueDate3}`
+            db.appendChild(divContent3)
+        }
+        else {
+            availability2 = false
+        }
+    }
+    if (availability2 === false && db.textContent === "") {
+        window.alert("No Task with low priority is present in the storage.")
+    }
 })
 
 deleteAllBtn.addEventListener("click", function () {
