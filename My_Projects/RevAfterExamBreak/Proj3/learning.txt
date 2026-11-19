@@ -1,0 +1,1 @@
+The variable held the arrow function itself because (() => {...}) only defines it-nothing calls it. Appending () turns it into an immediately-invoked function expression, so the function runs right away and the variable receives the returned string instead of the function object.
