@@ -2,4 +2,85 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: black;
+}
+
+.container-1 {
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    gap: 60px;
+}
+
+#title-1,
+#title-2 {
+    font-weight: normal;
+}
+
+#title-1:hover,
+#title-2:hover {
+    font-weight: bold;
+    text-decoration: underline orange;
+}
+
+.container-2 {
+    margin-top: 30px;
+    margin-left: 350px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 15px;
+    gap: 2px;
+}
+
+#email-fill {
+    width: 600px;
+    height: 30px;
+}
+
+.container-3 {
+    margin-top: 30px;
+    margin-left: 350px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 15px;
+    gap: 2px;
+}
+
+#password-fill {
+    width: 600px;
+    height: 30px;
+}
+
+/* .image-links img{
+    background-color: transparent;
+}
+
+.image-links img[alt="My Github Profile"],
+.image-links img[alt="My X Profile"] {
+    filter: invert(1);
+} */
+
+.image-links img[alt="My Github Profile"],
+.image-links img[alt="My X Profile"] {
+    background-color: white;
+    border-radius: 50%;
+}
+
+.image-links img[alt="My Github Profile"],
+.image-links img[alt="My X Profile"],
+.image-links img[alt="My Linkedin Profile"] {
+    border: 2px solid wheat;
+    border-radius: 5px;
 }

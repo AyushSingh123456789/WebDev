@@ -1,1 +1,12 @@
 The variable held the arrow function itself because (() => {...}) only defines it-nothing calls it. Appending () turns it into an immediately-invoked function expression, so the function runs right away and the variable receives the returned string instead of the function object.
+
+We can apply the above concept in 2 ways, either we append () in all the helping js files, i.e. (() => {...} ()) or just once inside our index.js file, which will call the function, hence returning the required data, i.e. githubProf(), linkedinProf(), xProf().
+
+3. Add the eye symbol(for visibility and hiding) inside the password field using opencode.
+
+
+4. Why Use createElement Instead of .innerHTML for adding images as links using just JavaScript?
+
+• Safer: It automatically escapes text and URLs, eliminating Cross-Site Scripting (XSS) security risks if any URLs come from user input or external APIs.
+• Preserves existing elements: Appending new nodes doesn't destroy or re-render elements (or event listeners) that are already inside newDiv.
+• Easier event handling: You have direct references to link and img in JavaScript if you want to immediately attach .addEventListener('click', ...) or .onerror handlers to each image.
