@@ -1,11 +1,27 @@
-const grid = document.querySelector(".grid");
+const sqBoxes = document.querySelectorAll(".box")
 
-function addBoxes(...classes) {
-    classes.forEach((className) => {
-        const box = document.createElement("div");
-        box.classList.add(className);
-        grid.append(box);
-    });
+function getLabelsHtml(text, sender, ...name) {
+    for (let i = 0; i < name.length; i++) {
+        sqBoxes[i].innerHTML = `
+            <div class="label-card">
+                <p> Dear ${name[i].name} </p>
+                <p> ${text} </p>
+                <p>Best Wishes</p>
+                <p>${sender}</p>
+            </div>
+        `
+    }
 }
 
-addBoxes("box", "box", "box", "box");
+
+const text = "Thank you for all your hardwork throughout the year! 🙏🎁"
+const sender = "Tom"
+
+getLabelsHtml(
+    text,
+    sender,
+    { name: "Sally" },
+    { name: "Mike" },
+    { name: "Rob" },
+    { name: "Harriet" }
+)
