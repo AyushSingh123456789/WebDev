@@ -83,12 +83,23 @@ function getPropertyHtml() {
                 <img src = "${img[i].src}">
                 <div class="card-right">
                     <h2> ${propertyForSaleArr[i].propertyLocation} </h2>
-                    <h3> ${propertyForSaleArr[i].priceGBP} </h3>
+                    <h3> $${propertyForSaleArr[i].priceGBP} </h3>
                     <p> ${propertyForSaleArr[i].comment} </p>
                     <h3> ${totalSize[i].size} </h3>
                 </div>
             </section>
         `
+        container[i].style.border = "2px solid blue"
+        container[i].style.display = "flex"
+        container[i].style.flexDirection = "column"
+        container[i].style.justifyContent = "center"
+        container[i].style.alignItems = "center"
+        container[i].style.textAlign = "center"
+        container[i].style.gap = "5px"
+
+        if (i == 0) container[i].style.marginTop = "5px"
+        else if (i == 3) container[i].style.marginBottom = "5px"
+
     }
 }
 
